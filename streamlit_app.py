@@ -16,7 +16,8 @@ st.write("The name on your smoothie will be", name_on_order)
 #Pulling fruit data from database
 cnx = st.connection("snowflake")
 session = cnx.session()
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+st.my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+st.stop()
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 #Creating ingredients list
